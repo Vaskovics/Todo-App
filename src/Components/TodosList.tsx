@@ -67,7 +67,7 @@ export const TodosList: React.FC<ListOfTodos> = ({
           return;
         }
 
-        const prevTodosList = structuredClone(todos);
+        const prevTodosList = todos.map(obj => ({ ...obj }));
         const updatedTodo = {
           ...todoToEdit,
           title: newTitleEdit,
